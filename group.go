@@ -11,6 +11,8 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+	"encoding/json"
+	"log"
 
 	waBinary "go.mau.fi/whatsmeow/binary"
 	"go.mau.fi/whatsmeow/store"
@@ -128,6 +130,8 @@ func (cli *Client) CreateGroup(ctx context.Context, req ReqCreateGroup) (*types.
 	}
 	groupNode, ok := resp.GetOptionalChildByTag("group")
 	if !ok {
+		respStr,_ := json.Marshal(resp)
+		log.Printf("not ok resp:%s", string(respStr))
 		return nil, &ElementMissingError{Tag: "group", In: "response to create group query"}
 	}
 	return cli.parseGroupNode(&groupNode)
