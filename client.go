@@ -525,9 +525,9 @@ func (cli *Client) unlockedConnect(ctx context.Context) error {
 		fs.HTTPHeaders.Set("User-Agent", cli.MessengerConfig.UserAgent)
 		fs.HTTPHeaders.Set("Cache-Control", "no-cache")
 		fs.HTTPHeaders.Set("Pragma", "no-cache")
-		//fs.HTTPHeaders.Set("Sec-Fetch-Dest", "empty")
-		//fs.HTTPHeaders.Set("Sec-Fetch-Mode", "websocket")
-		//fs.HTTPHeaders.Set("Sec-Fetch-Site", "cross-site")
+		fs.HTTPHeaders.Set("Sec-Fetch-Dest", "empty")
+		fs.HTTPHeaders.Set("Sec-Fetch-Mode", "websocket")
+		fs.HTTPHeaders.Set("Sec-Fetch-Site", "cross-site")
 	}
 	if err := fs.Connect(ctx); err != nil {
 		fs.Close(0)
