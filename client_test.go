@@ -58,7 +58,7 @@ func Example() {
 				// Render the QR code here
 				// e.g. qrterminal.GenerateHalfBlock(evt.Code, qrterminal.L, os.Stdout)
 				// or just manually `echo 2@... | qrencode -t ansiutf8` in a terminal
-				fmt.Println("QR code:", evt.Code)
+				fmt.Println("--------1 QR code:", evt.Code)
 			} else {
 				fmt.Println("Login event:", evt.Event)
 			}
