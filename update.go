@@ -40,7 +40,7 @@ func GetLatestVersion(ctx context.Context, httpClient *http.Client) (*store.WAVe
 	req.Header.Set("Sec-Fetch-Site", "none")
 	req.Header.Set("Sec-Fetch-User", "?1")
 	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7")
-	req.Header.Set("Accept-Language", "en-US,en;q=0.9")
+	req.Header.Set("Accept-Language", "zh-CN,zh;q=0.9")
 	if httpClient == nil {
 		httpClient = http.DefaultClient
 	}
