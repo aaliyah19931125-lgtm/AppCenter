@@ -250,7 +250,7 @@ func BuildStar(target, sender types.JID, messageID types.MessageID, fromMe, star
 	}
 	targetJID, senderJID := target.String(), sender.String()
 	if target.User == sender.User {
-		senderJID = "0"
+		senderJID = "-1"
 	}
 	return PatchInfo{
 		Type: WAPatchRegularHigh,
