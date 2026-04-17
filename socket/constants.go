@@ -29,7 +29,7 @@ const (
 	WAMagicValue = 6
 )
 
-var WAConnHeader = []byte{'W', 'A', WAMagicValue, token.DictVersion}
+var WAConnHeader = []byte{'W', 'B', WAMagicValue, token.DictVersion}
 
 const (
 	FrameMaxSize    = 1 << 24
