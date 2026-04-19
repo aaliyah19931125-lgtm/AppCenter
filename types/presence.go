@@ -73,6 +73,6 @@ func (rt ReceiptType) GoString() string {
 	case ReceiptTypePlayed:
 		return "types.ReceiptTypePlayed"
 	default:
-		return fmt.Sprintf("types.ReceiptType(%#v)", string(rt))
+		return fmt.Sprintf("----- types.ReceiptType(%#v)", string(rt))
 	}
 }
